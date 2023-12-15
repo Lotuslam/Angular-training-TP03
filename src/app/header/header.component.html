@@ -1,0 +1,20 @@
+<header class="site-header">
+    <div class="site-identity">
+        <a href="#"><img src="https://via.placeholder.com/200" alt="TP2 : Marketplace" /></a>
+        <h1><a href="#">TP2 : Marketplace</a></h1>
+    </div>
+    <nav class="site-navigation">
+        <ul class="nav">
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">
+                Cart <span class="badge" [ngClass]="{ 'badge-green': cartItems.length > 0, 'badge-yellow': cartItems.length === 0 }">{{ cartItems.length }}</span>
+            </a></li>
+            <button mat-icon-button (click)="openBasketModal()">
+                <mat-icon>shopping_cart</mat-icon>
+              </button>
+        </ul>
+
+    </nav>
+</header>

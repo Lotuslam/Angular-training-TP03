@@ -1,0 +1,12 @@
+<div>
+  <h2>Your Shopping Cart</h2>
+  <ul>
+    <li *ngFor="let cartItem of cartItems">
+      Product {{ cartItem.item.title }} - Quantity: {{ cartItem.quantity }}
+      <input type="number" [(ngModel)]="cartItem.quantity" (ngModelChange)="updateQuantity(cartItem)">
+      <button (click)="removeItem(cartItem)">X</button>
+      <ng-container *ngIf="!cartItem.item.isSelected"></ng-container>
+
+    </li>
+  </ul>
+</div>
